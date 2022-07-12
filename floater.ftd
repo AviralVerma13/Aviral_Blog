@@ -1,7 +1,7 @@
 -- import: fifthtry.github.io/doc-site as ft
 
 
--- ft.show-floater: true
+-- ft.show-floater: false
 
 
 -- ftd.font-size copy-tight-bold-desktop:
@@ -28,16 +28,50 @@ $processor$: toc
 
 - Home: /
 - Image: /image/
-- Floater: /floater/
+- The same name: /The same name/
 
 
 
--- ft.page: Floater
+-- ft.page: The same name
 
-To see working floater - click on Fifthtry vertical logo at right side of this page.
+I was at the big bazaar, shopping( of course!! I couldn’t be horse riding here.) choosing between the new stock of crockery as to which one should I buy.
+All of a sudden, I heard someone calling out my name.
 
-Floater can be enabled via adding below lines into `FPM.ftd` file of your package:
+“Garima? Garima?”
 
+I cracked upon it, surprisingly, along with a young girl of around 6 years of age enjoying herself glazing upon the toys in the nearby kids section.
+“Yes.” We both replied to that voice from that faraway gallery.I smiled back on her as she asked with all her pure innocence “Apna naam bhi Garima hai?”
+
+“Yes, sweet child. Well, Who gave you that name.” I enquired.
+“Garima.” The noise was heard again, only this time, the speaker was just behind us and I turned just to know that it was no other than him.
+“Daddy!” The little angel burst into happiness and clinged to his father.
+“Avi?” I was taken aback, seeing that visage after so many years. Oh, how could I have ever forget that face?
+
+“Long time, isn’t it?.”
+
+“Yes, indeed.”
+
+“So, that’s your baby girl?”
+
+“Yes, she is my sweet cookie.”
+
+“And why did u named her like that. I thought u would have forgotten me……”
+
+“Oh, actually her mother came up with that name.”
+
+“Oh yes, of course. Well, I was assured I would get an invitation for your…..”
+
+“Daddy…..”
+
+“Not now sweetheart. Come on, your mother would be waiting for us at home. Sorry, but we have to go now. Bye.”
+
+“But daddy….”
+
+“Let’s go baby, we will talk later okay.” And he grabbed her daughter’s hand and started towards the gallery
+
+“But daddy, u told me someone left me in an alley and u took me home. Remember? And who is this mother are talking about? I don’t have any mother!”
+And he turned his head, just for that one moment which so beautifully yet painfully revealed the pearl he had in his eyes. And he left, reimbursing the wound which i kept covered under fake expressions till now.
+And him? He used to tell me that one day “Garima” will be followed by “Verma” , and he had done it! The memories which the people thought to be his scars, he was roaming around, flaunting them as his tattoos.
 -- ft.code: add below lines into `FPM.ftd` file
 lang: ftd
 

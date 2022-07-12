@@ -104,28 +104,25 @@ $processor$: toc
 
 - Quickstart: /
 - GitHub: https://github.com/FifthTry/doc-site/
-- Use this template: https://github.com/FifthTry/doc-site/generate/
+;- Use this template: https://github.com/FifthTry/doc-site/generate/
 
 
 
 
 
 
--- page: Quickstart
+-- page: About me
 login-button: $login-button
 sections: $sample-header
 
-The length is how much memory, in bytes, the contents of the String is currently using. The capacity is the 
-total amount of memory, in bytes, that the String has received from the allocator. The difference between 
-length and capacity matters, but not in this context, so for now, it’s fine to ignore the capacity.
+I'm a cheerful enthusiastic individual with a knack to try everything and anything that i can possibly get my hands on,
+be it a new PC game, a good book, a music instrument or any other thing.
 
-When we assign s1 to s2, the String data is copied, meaning we copy the pointer, the length, and the capacity 
-that are on the stack. We do not copy the data on the heap that the pointer refers to. In other words, the 
-data representation in memory looks like Figure 4-2.
+I love to try all kinds of new things.
 
--- image: This is the image with caption
-src: $assets.files.static.Information_example_page_300px.jpg
-width: 400
+-- image: My team which organised TEDxHBTU, Feb 2019
+src: $assets.files.static.TEDxHBTU.jpg
+width: 550
 
 
 
