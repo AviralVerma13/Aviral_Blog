@@ -10,11 +10,11 @@ src: $src
 
 -- ft.page: Image with Caption
 
---- ft.image: This is me in all entirety.
+--- ft.image: This is the image with caption
 if: not $ft.is-mobile
 src: $assets.files.static.picture1.jpeg
 
---- ft.image: This is me in all entirety.
+--- ft.image: This is the image with caption
 if: $ft.is-mobile
 src: $assets.files.static.picture1.jpeg
 width: fill

@@ -1,4 +1,5 @@
 -- import: fifthtry.github.io/doc-site/assets
+-- import: fifthtry.github.io/footer/assets
 
 -- boolean login-button: false
 
@@ -14,9 +15,9 @@ $processor$: sitemap
 -- fpm.toc-item list sample-toc:
 $processor$: toc
 
-- Introduction:
-- Quickstart: 
-- Getting started: /
+- Introduction: 
+- About me:
+- Getting started: 
   - Deploy: /
 
 
@@ -24,8 +25,8 @@ $processor$: toc
 $processor$: toc
 
 - About me: /
-- Template: https://fifthtry.github.io/doc-site/
-;- Use this template: https://github.com/FifthTry/doc-site/generate/
+- GitHub: https://github.com/FifthTry/doc-site/
+- Use this template: https://github.com/FifthTry/doc-site/generate/
 
 
 -- fpm.toc-item list sample-left:
@@ -33,13 +34,12 @@ $processor$: toc
 
 - Home: /
 - Poems: /
-  - Poem1 : /Poems/Poem1/
 - Stories: /
 
 -- fpm.toc-item list sample-right:
 $processor$: toc
 
-- Latest Publications: 
+- Latest Stories:
   - Santa Maria: /
   - Bina Recoz: /
   - A Day in the Dark: /
@@ -59,17 +59,13 @@ nav-title-url: /log/
 nav-sub-title: This is article title
 nav-sub-title-url: /article/
 
-The length is how much memory, in bytes, the contents of the String is currently using. The capacity is the 
-total amount of memory, in bytes, that the String has received from the allocator. The difference between 
-length and capacity matters, but not in this context, so for now, it’s fine to ignore the capacity.
+I'm a cheerful enthusiastic guy with a knack to learn everything that looks interesting to my heart and mind.
 
-When we assign s1 to s2, the String data is copied, meaning we copy the pointer, the length, and the capacity 
-that are on the stack. We do not copy the data on the heap that the pointer refers to. In other words, the 
-data representation in memory looks like Figure 4-2.
+I like to try all kinds of things that i can get my hands on, like music, poetry, stand-up, games, etc.
 
--- image: This is the image with caption
-src: $assets.files.static.Information_example_page_300px.jpg
-width: 400
+-- image: My team of TEDxHBTU, Feb 2019
+src: $assets.files.static.front.jpg
+width: 600
 
 
 
@@ -118,8 +114,8 @@ weight: 700
 -- integer max-width: 1000
 -- string github: NA
 -- optional string site-name: 
--- optional ftd.image-src rabbitlogo:
--- optional ftd.image-src brand-rabbitlogo:
+-- optional ftd.image-src site-logo:
+-- optional ftd.image-src brand-site-logo:
 -- optional string brand-site-name: 
 -- optional string brand-caption:
 -- optional string brand-site-url: index.html
@@ -170,7 +166,7 @@ login-button: $login-button
 sections: $sections
 sub-sections: $sub-sections
 extra: $extra
-rabbitlogo: $rabbitlogo
+site-logo: $site-logo
 site-url: $site-url
 site-name: $site-name
 background: $header-bg
@@ -370,7 +366,7 @@ current-section: $current-section
 current-subsection: $current-subsection
 current-page: $current-page
 extra: $extra
-rabbitlogo: $rabbitlogo
+site-logo: $site-logo
 site-url: $site-url
 site-name: $site-name
 logo-height: 38
@@ -456,10 +452,10 @@ toc: $toc
 current-section: $current-section
 current-subsection: $current-subsection
 current-page: $current-page
-rabbitlogo: $rabbitlogo
+site-logo: $site-logo
 site-url: $site-url
 brand-site-url: $brand-site-url
-brand-rabbitlogo: $brand-rabbitlogo
+brand-site-logo: $brand-site-logo
 brand-site-name: $brand-site-name
 brand-caption: $brand-caption
 site-name: $site-name

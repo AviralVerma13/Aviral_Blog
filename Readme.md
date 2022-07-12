@@ -1,2 +1,2 @@
-# My blog
-Of poems and Prose
+# Documentation pakage
+Template for book written as FPM Package
