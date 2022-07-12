@@ -1,0 +1,573 @@
+-- boolean is-mobile: false
+
+-- is-mobile: true
+if: $ftd.device == mobile
+
+
+
+
+
+-- aditi.page: Learning ftd Course
+
+I am learning about ftd
+
+
+
+
+
+-- aditi.h2: QUOTES
+
+Quote is something that helps you to give motivation in life.
+
+
+
+
+
+-- aditi.code: Code for  `-- Quote-1`
+lang: ftd
+
+\-- whitey1: Lebbeus Woods
+label: Software Developer
+
+Architecture is about ideas
+in the first place. You don't
+get to design until you
+have an idea.
+
+
+
+
+
+-- whitey1: Lebbeus Woods
+label: Software Developer
+
+Architecture is about ideas
+in the first place. You don't
+get to design until you
+have an idea.
+
+
+
+
+
+
+
+
+
+
+-- aditi.code: Code for `-- Quote-2`
+lang: ftd
+
+\-- whitey2: Abert Einstein
+label: Software Developer
+
+Life is like riding bicycle.
+To keep your balance,
+you must keep moving.
+
+
+
+
+
+-- whitey2: Abert Einstein
+label: Software Developer
+
+Life is like riding bicycle.
+To keep your balance,
+you must keep moving.
+
+
+
+
+
+
+
+
+
+
+-- aditi.code: Code for `-- Quote-3`
+lang: ftd
+
+\-- whitey3: Theodore Roosevelt
+label: Software Developer
+
+"Believe you can
+and you're halfway there."
+
+
+
+
+
+-- whitey3: Theodore Roosevelt
+label: Software Developer
+
+"Believe you can
+and you're halfway there."
+
+
+
+
+
+
+
+
+
+
+-- aditi.code: Code for  `-- Quote-4`
+lang: ftd
+
+\-- whitey4: -- Robert Bringhurst
+
+"Big type, even huge type, can be beautiful and useful. But
+poise is usually far more important than size – and poise
+consists primarily of emptiness. Typographically, poise
+is made of white space."
+
+
+
+
+
+-- whitey4: -- Robert Bringhurst
+
+
+"Big type, even huge type, can be beautiful and useful. But
+
+poise is usually far more important than size – and poise
+
+consists primarily of emptiness. Typographically, poise
+
+is made of white space."
+
+
+
+
+
+
+
+
+
+
+-- aditi.code: Code for  `-- Quote-5`
+lang: ftd
+
+\-- whitey5:
+
+"There is a quote."
+"There is an other quote."
+"Guess what, A quote."
+"Ahem... This is not even a quote"
+
+
+
+
+
+-- whitey5:
+
+"There is a quote."
+
+"There is an other quote."
+
+"Guess what, A quote."
+
+"Ahem... This is not even a quote"
+
+
+
+
+
+
+
+
+
+
+-- aditi.code: Code for  `-- Quote-6`
+lang: ftd
+
+\-- whitey6: JACQUES-YVES COUSTEAU
+
+"What is a scientist after all?
+It is a curious man looking through
+a keyhole, the keyhole of nature,
+trying to know what's going on."
+
+
+
+
+
+-- whitey6: JACQUES-YVES COUSTEAU
+
+"What is a scientist after all?
+
+It is a curious man looking through
+
+a keyhole, the keyhole of nature,
+
+trying to know what's going on."
+
+
+
+
+
+
+
+
+
+
+-- aditi.code: Code for  `-- Quote-7`
+lang: ftd
+
+\-- whitey7: Winston Churchill
+
+"Success consists of going from failure
+to failure without loss of enthusiasm"
+
+
+
+
+
+-- whitey7: Winston Churchill
+
+
+"Success consists of going from failure
+to failure without loss of enthusiasm"
+
+
+
+
+
+
+
+
+
+
+-- ftd.column whitey1:
+optional caption title:
+optional string label:
+body body:
+margin-top: $fpm.space.space-6
+margin-bottom: $fpm.space.space-6
+width: auto
+width if $is-mobile: fill
+align: center
+
+
+--- ftd.column:
+align: center
+padding-vertical: $fpm.space.space-2
+padding-horizontal: $fpm.space.space-2
+max-width: 756
+
+--- ftd.text:
+text: $body
+color: $fpm.color.main.text
+role: $fpm.type.heading-small
+padding-horizontal: $fpm.space.space-7
+margin-top: 16
+margin-bottom: 16
+text-align: center
+
+--- ftd.text: $title
+align: center
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text
+padding-horizontal: $fpm.space.space-7
+
+--- ftd.text: $label
+align: center
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text
+padding-horizontal: $fpm.space.space-7
+
+--- container: ftd.main
+
+
+
+
+
+
+
+
+
+
+-- ftd.column whitey2:
+optional caption title:
+optional string label:
+body body:
+margin-top: $fpm.space.space-6
+margin-bottom: $fpm.space.space-6
+width: auto
+width if $is-mobile: fill
+align: center
+
+--- ftd.column:
+align: center
+padding-vertical: $fpm.space.space-2
+padding-horizontal: $fpm.space.space-2
+max-width: 756
+
+--- ftd.text:
+text: $body
+color: $fpm.color.main.text
+role: $fpm.type.heading-small
+padding-horizontal: $fpm.space.space-7
+margin-top: 16
+margin-bottom: 16
+text-align: center
+
+--- ftd.text: $title
+align: center
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text
+padding-horizontal: $fpm.space.space-7
+
+--- ftd.text: $label
+align: center
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text
+padding-horizontal: $fpm.space.space-7
+
+--- container: ftd.main
+
+
+
+
+
+
+
+
+
+
+-- ftd.column whitey3:
+optional caption title:
+optional string label:
+body body:
+margin-top: $fpm.space.space-6
+margin-bottom: $fpm.space.space-6
+width: auto
+width if $is-mobile: fill
+align: center
+
+
+--- ftd.column:
+align: center
+padding-vertical: $fpm.space.space-2
+padding-horizontal: $fpm.space.space-2
+max-width: 756
+
+--- ftd.text:
+text: $body
+color: $fpm.color.main.text
+role: $fpm.type.heading-small
+padding-horizontal: $fpm.space.space-7
+margin-top: 16
+margin-bottom: 16
+text-align: center
+
+--- ftd.text: $title
+align: center
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text
+padding-horizontal: $fpm.space.space-7
+
+--- ftd.text: $label
+align: center
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text
+padding-horizontal: $fpm.space.space-7
+
+--- container: ftd.main
+
+
+
+
+
+
+
+
+
+
+-- ftd.column whitey4:
+optional caption title:
+optional string label:
+body body:
+margin-top: $fpm.space.space-6
+margin-bottom: $fpm.space.space-6
+width: auto
+width if $is-mobile: fill
+align: center
+
+--- ftd.column:
+align: center
+padding-vertical: $fpm.space.space-2
+padding-horizontal: $fpm.space.space-2
+max-width: 756
+
+--- ftd.text:
+text: $body
+color: $fpm.color.main.text
+role: $fpm.type.heading-small
+padding-horizontal: $fpm.space.space-7
+margin-top: 16
+margin-bottom: 16
+text-align: left
+
+
+--- ftd.text: $title
+align: left
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text
+padding-horizontal: $fpm.space.space-7
+
+--- ftd.text: $label
+align: center
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text
+padding-horizontal: $fpm.space.space-7
+
+--- container: ftd.main
+
+
+
+
+
+
+
+
+
+
+-- ftd.column whitey5:
+optional caption title:
+optional string label:
+body body:
+margin-top: $fpm.space.space-6
+margin-bottom: $fpm.space.space-6
+width: auto
+width if $is-mobile: fill
+align: center
+
+
+--- ftd.column:
+align: center
+padding-vertical: $fpm.space.space-2
+padding-horizontal: $fpm.space.space-2
+max-width: 756
+
+--- ftd.text:
+text: $body
+color: $fpm.color.main.text
+role: $fpm.type.heading-small
+padding-horizontal: $fpm.space.space-7
+margin-top: 16
+margin-bottom: 16
+text-align: center
+
+--- ftd.text: $title
+align: center
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text
+padding-horizontal: $fpm.space.space-7
+
+--- ftd.text: $label
+align: center
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text
+padding-horizontal: $fpm.space.space-7
+
+--- container: ftd.main
+
+
+
+
+
+
+
+
+
+
+-- ftd.column whitey6:
+optional caption title:
+optional string label:
+body body:
+margin-top: $fpm.space.space-6
+margin-bottom: $fpm.space.space-6
+width: auto
+width if $is-mobile: fill
+align: center
+
+
+--- ftd.column:
+align: center
+padding-vertical: $fpm.space.space-2
+padding-horizontal: $fpm.space.space-2
+max-width: 756
+
+--- ftd.text:
+text: $body
+color: $fpm.color.main.text
+role: $fpm.type.heading-small
+padding-horizontal: $fpm.space.space-7
+margin-top: 16
+margin-bottom: 16
+text-align: center
+
+--- ftd.text: $title
+align: center
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text
+padding-horizontal: $fpm.space.space-7
+
+--- ftd.text: $label
+align: center
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text
+padding-horizontal: $fpm.space.space-7
+
+--- container: ftd.main
+
+
+
+
+
+
+
+
+
+
+-- ftd.column whitey7:
+optional caption title:
+optional string label:
+body body:
+margin-top: $fpm.space.space-6
+margin-bottom: $fpm.space.space-6
+width: auto
+width if $is-mobile: fill
+align: center
+
+--- ftd.column:
+align: center
+padding-vertical: $fpm.space.space-2
+padding-horizontal: $fpm.space.space-2
+max-width: 756
+
+--- ftd.text:
+text: $body
+color: $fpm.color.main.text
+role: $fpm.type.heading-small
+padding-horizontal: $fpm.space.space-7
+margin-top: 16
+margin-bottom: 16
+text-align: center
+
+--- ftd.text: $title
+align: center
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text
+padding-horizontal: $fpm.space.space-7
+
+--- ftd.text: $label
+align: center
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text
+padding-horizontal: $fpm.space.space-7
+
+--- container: ftd.main
