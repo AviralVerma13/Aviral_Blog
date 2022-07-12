@@ -28,7 +28,7 @@ base: https://raw.githubusercontent.com/fifthtry/doc-site/main
 # Home: /index.html
 
 - Image: /image/
-- Floater: /floater/
+- The same name: /floater/
 
 # GitHub
 url: https://github.com/FifthTry/doc-site/
