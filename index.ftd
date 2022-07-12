@@ -1,5 +1,4 @@
 -- import: fifthtry.github.io/doc-site/assets
--- import: fifthtry.github.io/footer/assets
 
 -- boolean login-button: false
 
@@ -7,65 +6,126 @@
 
 -- boolean parent-brand: true
 
+-- boolean show-floater: false
+
+-- ftd.color light-green:
+light: #0DCEAB
+dark: #0DCEAB
+
+-- ftd.font-size small-bold-desktop:
+line-height: 16
+size: 12
+letter-spacing: 0
+
+-- ftd.type small-bold: $fpm.font-display
+desktop: $small-bold-desktop
+mobile: $small-bold-desktop
+xl: $small-bold-desktop
+weight: 400
+
+
+-- ftd.font-size copy-tight-bold-desktop:
+line-height: 20
+size: 16
+letter-spacing: 0
+
+-- ftd.type copy-tight-bold: $fpm.font-display
+desktop: $copy-tight-bold-desktop
+mobile: $copy-tight-bold-desktop
+xl: $copy-tight-bold-desktop
+weight: 700
+
+-- ftd.font-size copy-print-desktop:
+line-height: 18
+size: 12
+letter-spacing: 0
+
+-- ftd.type copy-print: $fpm.font-display
+desktop: $copy-print-desktop
+mobile: $copy-print-desktop
+xl: $copy-print-desktop
+weight: 400
+
+-- ftd.font-size fine-print-desktop:
+line-height: 16
+size: 14
+letter-spacing: 0
+
+-- ftd.type fine-print: $fpm.font-display
+desktop: $fine-print-desktop
+mobile: $fine-print-desktop
+xl: $fine-print-desktop
+weight: 700
+
+-- ftd.font-size large-desktop:
+line-height: 20
+size: 12
+letter-spacing: 0
+
+-- ftd.type large: $fpm.font-display
+desktop: $large-desktop
+mobile: $large-desktop
+xl: $large-desktop
+weight: 400
+
+-- ftd.color right-sidebar-background:
+light: #262626
+dark: #262626
+
+-- record tc:
+caption title:
+optional string url:
+boolean is-last: false
+
+-- tc list tc-list:
+
+-- tc-list: About
+url: https://github.com/FifthTry
+
+-- tc-list: Terms
+url: https://fifthtry.com/terms/
+
+-- tc-list: Privacy
+url: https://fifthtry.com/privacy/
+
+-- tc-list: Blog
+url: https://fifthtry.com/blog/
+is-last: true
 
 -- fpm.sitemap-data sitemap:
 $processor$: sitemap
 
 
--- fpm.toc-item list sample-toc:
-$processor$: toc
 
-- Introduction: 
-- About me:
-- Getting started: 
-  - Deploy: /
 
 
 -- fpm.toc-item list sample-header:
 $processor$: toc
 
-- About me: /
+- Quickstart: /
 - GitHub: https://github.com/FifthTry/doc-site/
 - Use this template: https://github.com/FifthTry/doc-site/generate/
 
 
--- fpm.toc-item list sample-left:
-$processor$: toc
-
-- Home: /
-- Poems: /
-- Stories: /
-
--- fpm.toc-item list sample-right:
-$processor$: toc
-
-- Latest Stories:
-  - Santa Maria: /
-  - Bina Recoz: /
-  - A Day in the Dark: /
-- Author Diary: /
 
 
 
 
--- page: About me
-toc: $sample-toc
-sub-sections: $sample-left
+-- page: Quickstart
 login-button: $login-button
-/extra: $sample-right
 sections: $sample-header
-nav-title: Blog
-nav-title-url: /log/
-nav-sub-title: This is article title
-nav-sub-title-url: /article/
 
-I'm a cheerful enthusiastic guy with a knack to learn everything that looks interesting to my heart and mind.
+The length is how much memory, in bytes, the contents of the String is currently using. The capacity is the 
+total amount of memory, in bytes, that the String has received from the allocator. The difference between 
+length and capacity matters, but not in this context, so for now, it’s fine to ignore the capacity.
 
-I like to try all kinds of things that i can get my hands on, like music, poetry, stand-up, games, etc.
+When we assign s1 to s2, the String data is copied, meaning we copy the pointer, the length, and the capacity 
+that are on the stack. We do not copy the data on the heap that the pointer refers to. In other words, the 
+data representation in memory looks like Figure 4-2.
 
--- image: My team of TEDxHBTU, Feb 2019
-src: $assets.files.static.front.jpg
-width: 600
+-- image: This is the image with caption
+src: $assets.files.static.Information_example_page_300px.jpg
+width: 400
 
 
 
@@ -276,11 +336,33 @@ optional string nav-title:
 optional string nav-title-url:
 optional string nav-sub-title:
 optional string nav-sub-title-url:
+string github-text: {green: Sign in} to access Editing Tools
+string github-text-url: /
+ftd.image-src side-logo: $assets.files.static.editor-icon.svg
+ftd.image-src sidebar-brand-logo: $assets.files.static.brand-logo.svg
+ftd.image-src cross-icon:$assets.files.static.cross.svg
+string about-text: About this page
+string about-text-url: /
+string edit-text: Edit This Page
+string edit-text-url: /
+tc list tc-list: $tc-list
 width: fill
 open: true
 boolean widthfill: false
 append-at: main-container
 
+--- floater:
+if: $show-floater
+sidebar-brand-logo: $sidebar-brand-logo
+cross-icon: $cross-icon
+side-logo: $side-logo
+about-text-url: $about-text-url
+about-text: $about-text
+edit-text: $edit-text
+edit-text-url: $edit-text-url
+tc-list: $tc-list
+github-text-url: $github-text-url
+github-text: $github-text
 
 --- container: ftd.main
 
@@ -991,3 +1073,192 @@ if: $body is not null
 role: $fpm.type.copy-large
 
 $body
+
+
+
+
+
+
+
+
+
+
+-- ftd.column floater:
+anchor: window
+top: 0
+right: 0
+id: sidebar
+ftd.image-src side-logo:
+tc list tc-list:
+height: fill
+max-height: calc 100vh - 0px
+string github-text:
+boolean open: false
+z-index: 1000
+string github-text-url: 
+ftd.image-src side-logo: 
+ftd.image-src sidebar-brand-logo: 
+ftd.image-src cross-icon:
+string about-text: 
+string about-text-url: 
+string edit-text:
+string edit-text-url:
+$on-click-outside$: $open = false
+
+--- ftd.image:
+if: not $open
+src: $side-logo
+height: 89
+width: 27
+move-down: 250
+$on-click$: $open= true
+
+--- container:  ftd.main
+
+--- ftd.column:
+if: $open
+id: right-sidebar
+min-width: 256
+height: calc 100%
+max-height: calc percent 100
+
+--- ftd.row:
+width: fill
+height: fill
+padding-horizontal: 16
+padding-vertical: 20
+background-color: $right-sidebar-background
+
+--- ftd.column:
+width: fill
+height: fill
+id: first-row
+
+--- ftd.column:
+height: fill
+id: section-container
+width: fill
+spacing: 12
+
+--- ftd.row:
+width: fill
+
+--- ftd.text: $about-text
+link: $about-text-url
+role: $small-bold
+width: fill
+color: $fpm.color.main.text-strong
+
+--- ftd.image:
+$on-click$: $open = false
+src: $cross-icon
+width: 16
+height: 16
+
+--- container: section-container
+
+--- ftd.column:
+width: fill
+height: fill
+overflow-y: auto
+
+--- ftd.text: $edit-text
+link: $edit-text-url
+role: $fine-print
+color: $light-green
+
+--- container: first-row
+
+--- ftd.column:
+
+--- ftd.row:
+width: fill
+spacing: 16
+
+--- ftd.image:
+src: $assets.files.static.avatar.svg
+
+--- ftd.text: $github-text
+link: $github-text-url
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text-strong
+max-width: 127
+
+--- container: right-sidebar
+
+--- ftd.column:
+width:fill
+id: floater-container
+background-color: $fpm.color.main.background.step-1
+padding-vertical: $fpm.space.space-2
+padding-horizontal: $fpm.space.space-4
+spacing: 8
+
+--- ftd.text: powered by
+role: $large
+color: $fpm.color.main.text-strong
+
+--- ftd.row:
+link: https://fifthtry.com/
+height: 32
+
+--- ftd.image:
+src: $sidebar-brand-logo
+width: auto
+height: 32
+
+--- container: floater-container
+
+--- ftd.row:
+width: fill
+spacing: 8
+
+--- footer-list:
+title: $obj.title
+url: $obj.url
+is-last: $obj.is-last
+$loop$: $tc-list as $obj
+
+
+
+
+
+
+
+
+
+
+-- ftd.text green: text
+role: $copy-tight-bold
+color: $light-green
+
+
+
+
+
+
+
+
+
+
+-- ftd.row footer-list:
+caption title:
+string url:
+boolean is-last:
+color: $fpm.color.main.text-strong
+spacing: 8
+
+
+--- ftd.text: $title
+role:$copy-print
+link: $url
+color: $fpm.color.main.text-strong
+open-in-new-tab: true
+
+--- ftd.row:
+margin-top: 8
+if: not $is-last
+padding-vertical: 1
+padding-horizontal: 1
+border-radius: 100
+background-color: $fpm.color.main.text-strong
