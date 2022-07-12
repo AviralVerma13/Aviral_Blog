@@ -1,0 +1,996 @@
+-- import: fifthtry.github.io/doc-site/assets
+
+-- boolean login-button: false
+
+-- boolean pricing-cta: false
+
+-- boolean parent-brand: true
+
+
+-- fpm.sitemap-data sitemap:
+$processor$: sitemap
+
+
+-- fpm.toc-item list sample-toc:
+$processor$: toc
+
+- Introduction: 
+- Quickstart: 
+- Getting started: 
+  - Deploy: /
+
+
+-- fpm.toc-item list sample-header:
+$processor$: toc
+
+- Quickstart: /
+- GitHub: https://github.com/FifthTry/doc-site/
+- Use this template: https://github.com/FifthTry/doc-site/generate/
+
+
+-- fpm.toc-item list sample-left:
+$processor$: toc
+
+- Home: /
+- About: /
+- Publications: /
+
+-- fpm.toc-item list sample-right:
+$processor$: toc
+
+- Latest Publications: 
+  - Santa Maria: /
+  - Bina Recoz: /
+  - A Day in the Dark: /
+- Author Diary: /
+
+
+
+
+-- page: Quickstart
+toc: $sample-toc
+sub-sections: $sample-left
+login-button: $login-button
+/extra: $sample-right
+sections: $sample-header
+nav-title: Blog
+nav-title-url: /log/
+nav-sub-title: This is article title
+nav-sub-title-url: /article/
+
+The length is how much memory, in bytes, the contents of the String is currently using. The capacity is the 
+total amount of memory, in bytes, that the String has received from the allocator. The difference between 
+length and capacity matters, but not in this context, so for now, it’s fine to ignore the capacity.
+
+When we assign s1 to s2, the String data is copied, meaning we copy the pointer, the length, and the capacity 
+that are on the stack. We do not copy the data on the heap that the pointer refers to. In other words, the 
+data representation in memory looks like Figure 4-2.
+
+-- image: This is the image with caption
+src: $assets.files.static.Information_example_page_300px.jpg
+width: 400
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.font-size cta-txt:
+line-height: 16
+size: 14
+letter-spacing: 0
+
+-- ftd.type cta: $fpm.font-display
+desktop: $cta-txt
+mobile: $cta-txt
+xl: $cta-txt
+weight: 700
+
+
+-- fpm.theme-color: #1F5E6B
+-- boolean sidebar-open: false
+
+
+-- string toc-sidebar-width: 300
+-- string toc-mobile-sidebar-width: percent 70
+-- integer content-padding: 150
+-- integer max-width: 1000
+-- string github: NA
+-- optional string site-name: 
+-- optional ftd.image-src site-logo:
+-- optional ftd.image-src brand-site-logo:
+-- optional string brand-site-name: 
+-- optional string brand-caption:
+-- optional string brand-site-url: index.html
+
+
+
+-- string site-url: index.html
+
+
+-- fpm.toc-item list sections:
+-- fpm.toc-item list sub-sections:
+-- fpm.toc-item list extra:
+-- fpm.toc-item list toc:
+-- fpm.toc-item list footer-toc:
+
+
+
+-- boolean is-mobile: false
+
+-- is-mobile: true
+if: $ftd.device == mobile
+
+
+
+/-- ftd.column page_:
+optional caption title:
+optional body body:
+width: fill
+background-color: $fpm.color.main.background.base
+open: true
+append-at: content-container
+fpm.toc-item list sections: $sitemap.sections
+fpm.toc-item list sub-sections: $sitemap.subsections
+fpm.toc-item list extra: $extra
+fpm.toc-item list toc: $sitemap.toc
+optional string nav-title: 
+optional string nav-title-url:
+optional string nav-sub-title:
+optional string nav-sub-title-url:
+boolean login-button: $login-button
+optional string login-btn-txt: Login
+optional string sign-in-txt: 
+
+--- container: ftd.main
+
+/--- h.header:
+login-button: $login-button
+sections: $sections
+sub-sections: $sub-sections
+extra: $extra
+site-logo: $site-logo
+site-url: $site-url
+site-name: $site-name
+background: $header-bg
+text-color: $fpm.color.main.cta-primary.base
+active-text-color: $fpm.color.main.cta-primary.base
+menu-right: 0
+menu-left: -88
+menu-bg: $fpm.color.main.background.step-1
+menu-hover-bg: $fpm.color.main.background.step-2
+menu-link: $fpm.color.main.text
+menu-link-active: $fpm.color.main.text
+logo-height: 38
+current-url: /home/
+toc: $toc
+nav-title: $nav-title
+nav-title-url: $nav-title-url
+nav-sub-title: $nav-sub-title
+nav-sub-title-url: $nav-sub-title-url
+login-btn-txt: $login-btn-txt
+sign-in-txt: $sign-in-txt
+
+--- container: ftd.main
+
+--- ftd.column:
+id: content-container
+width: fill
+max-width: 1104
+align: center
+min-height: calc 100vh
+padding-vertical: 40
+padding-horizontal if $is-mobile: 20
+
+--- tf.h0: $title
+if: $title is not null
+
+
+--- tf.markdown:
+if: $body is not null
+
+$body
+
+
+--- container: ftd.main
+
+--- footer:
+if: $footer-toc is not empty
+footer-toc: $footer-toc
+
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.column content:
+width: fill
+open: true
+append-at: content-container
+padding-vertical: 30
+
+--- ftd.column:
+if: not $is-mobile
+max-width: 1104
+width: fill
+align: center
+id:  content-container
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $is-mobile
+width: fill
+align: center
+padding-horizontal: 20
+id:  content-container
+
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.column page:
+optional caption title:
+optional body body:
+fpm.toc-item list toc: $sitemap.toc
+boolean login-button: $login-button
+boolean pricing-cta: $pricing-cta
+fpm.toc-item list sections: $sitemap.sections
+fpm.toc-item list sub-sections: $sitemap.subsections
+optional fpm.toc-item current-section: $sitemap.current-section
+optional fpm.toc-item current-subsection: $sitemap.current-subsection
+optional fpm.toc-item current-page: $sitemap.current-page
+fpm.toc-item list extra: $extra
+fpm.toc-item list footer-toc: $footer-toc
+optional string nav-title: 
+optional string nav-title-url:
+optional string nav-sub-title:
+optional string nav-sub-title-url:
+width: fill
+open: true
+boolean widthfill: false
+append-at: main-container
+
+
+--- container: ftd.main
+
+--- doc-page-desktop: $title
+if: not $is-mobile
+id: main-container
+toc: $toc
+login-button: $login-button
+footer-toc: $footer-toc
+pricing-cta: $pricing-cta
+sections: $sections
+current-section: $current-section
+current-subsection: $current-subsection
+current-page: $current-page
+sub-sections: $sub-sections
+nav-title: $nav-title 
+nav-title-url: $nav-title-url
+nav-sub-title: $nav-sub-title
+nav-sub-title-url: $nav-sub-title-url
+extra: $extra
+body: $body
+widthfill: $widthfill
+
+
+--- container: ftd.main
+
+--- doc-page-mobile: $title
+if: $is-mobile
+id: main-container
+toc: $toc
+footer-toc: $footer-toc
+sections: $sections
+toc: $toc
+sub-sections: $sub-sections
+current-section: $current-section
+current-subsection: $current-subsection
+current-page: $current-page
+extra: $extra
+body: $body
+
+
+
+
+
+
+
+
+
+-- ftd.column doc-page-desktop:
+optional caption title:
+optional body body:
+fpm.toc-item list toc: $toc
+fpm.toc-item list sections:
+fpm.toc-item list sub-sections:
+fpm.toc-item list extra:
+fpm.toc-item list footer-toc:
+optional fpm.toc-item current-section:
+optional fpm.toc-item current-page:
+optional fpm.toc-item current-subsection:
+optional string nav-title: 
+optional string nav-title-url:
+optional string nav-sub-title:
+optional string nav-sub-title-url:
+optional string login-btn-txt: Login
+boolean pricing-cta: 
+optional string sign-in-txt:
+boolean widthfill: 
+boolean login-button:
+boolean pricing-cta:
+width: fill
+open: true
+append-at: main-container
+background-color: $fpm.color.main.background.base
+
+--- h.header:
+login-button: $login-button
+pricing-cta: $pricing-cta
+login-btn-txt: $login-btn-txt
+sign-in-txt: $sign-in-txt 
+sections: $sections
+sub-sections: $sub-sections
+current-section: $current-section
+current-subsection: $current-subsection
+current-page: $current-page
+extra: $extra
+site-logo: $site-logo
+site-url: $site-url
+site-name: $site-name
+logo-height: 38
+menu-right: 0
+menu-left: -88
+current-url: /home/
+menu-icon: $assets.files.static.header.hamburger.svg
+
+
+
+--- ftd.row:
+width: fill
+id: main-row
+spacing: 48
+
+--- render-toc:
+if: $toc is not empty
+toc-obj: $toc
+
+--- container: main-row
+
+--- ftd.column:
+width: fill
+
+--- ftd.column:
+id: main-container
+max-width if $toc is empty: 1104
+max-width if $widthfill: fill
+max-width: 800
+align if $toc is empty: center
+align: top
+min-height: calc 100vh
+padding-horizontal if not $widthfill: 34
+padding-vertical if not $widthfill: 25
+width: fill
+
+--- tf.h0: $title
+if: $title is not null
+
+
+--- tf.markdown:
+if: $body is not null
+
+$body
+
+
+--- container: ftd.main
+
+--- footer:
+if: $footer-toc is not empty
+footer-toc: $footer-toc
+
+
+
+
+
+
+
+
+-- ftd.column doc-page-mobile:
+optional caption title:
+optional body body:
+fpm.toc-item list toc: $toc
+fpm.toc-item list sections:
+fpm.toc-item list sub-sections:
+fpm.toc-item list extra:
+fpm.toc-item list footer-toc:
+fpm.toc-item list footer-toc: $footer-toc
+fpm.toc-item list toc: $toc
+optional fpm.toc-item current-section:
+optional fpm.toc-item current-page:
+optional fpm.toc-item current-subsection:
+width: fill
+open: true
+append-at: main-container
+background-color: $fpm.color.main.background.base
+
+--- h.header:
+sections: $sections
+sub-sections: $sub-sections
+extra: $extra
+toc: $toc
+current-section: $current-section
+current-subsection: $current-subsection
+current-page: $current-page
+site-logo: $site-logo
+site-url: $site-url
+brand-site-url: $brand-site-url
+brand-site-logo: $brand-site-logo
+brand-site-name: $brand-site-name
+brand-caption: $brand-caption
+site-name: $site-name
+logo-height: 38
+menu-right: 0
+menu-left: -88
+current-url: /home/
+menu-icon: $assets.files.static.header.hamburger.svg
+parent-brand: $parent-brand
+
+
+--- container: ftd.main
+
+--- ftd.row:
+width: fill
+id: main-row
+
+--- ftd.column:
+id: main-container
+width: fill
+align: top
+min-height: calc 100vh
+padding-horizontal: 20
+padding-vertical: 20
+
+--- tf.h0: $title
+if: $title is not null
+
+
+--- tf.markdown:
+if: $body is not null
+
+$body
+
+
+
+--- container: ftd.main
+
+--- footer:
+if: $footer-toc is not empty
+footer-toc: $footer-toc
+
+
+
+
+
+
+
+-- ftd.text footer-link:
+string url:
+caption title:
+link: $url
+text: $title
+role: $fpm.type.label-big
+min-width: fit-content
+padding-left: 10
+padding-top: 6
+padding-bottom: 6
+color: $fpm.color.main.text
+
+
+
+
+
+
+
+-- ftd.column footer-instance:
+fpm.toc-item footer-toc:
+min-width: portion 1
+
+--- ftd.text: $footer-toc.title
+min-width: fit-content
+padding-left: 10
+padding-top: 3
+padding-bottom: 8
+color: $fpm.color.main.text
+role: $fpm.type.label-big
+
+--- footer-link: $obj.title
+$loop$: $footer-toc.children as $obj
+url: $obj.url
+
+
+-- ftd.row footer:
+fpm.toc-item list footer-toc:
+width: fill
+
+--- footer-desktop:
+if: not $is-mobile
+footer-toc: $footer-toc
+
+container: ftd.main
+
+--- footer-mobile:
+if: $is-mobile
+footer-toc: $footer-toc
+
+
+
+
+
+
+
+
+-- ftd.row footer-desktop:
+fpm.toc-item list footer-toc:
+width: fill
+background-color: $fpm.color.main.background.base
+padding-horizontal: 150
+padding-vertical: 50
+spacing: space-between
+
+--- footer-instance:
+$loop$: $footer-toc as $obj
+footer-toc: $obj
+
+
+
+
+
+
+-- ftd.column footer-mobile:
+fpm.toc-item list footer-toc:
+width: fill
+background-color: $fpm.color.main.background.base
+padding-horizontal: 20
+padding-vertical: 50
+position: left
+
+--- footer-instance:
+$loop$: $footer-toc as $obj
+footer-toc: $obj
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.column toc-instance:
+fpm.toc-item toc:
+id: toc-instance
+
+
+--- ftd.text:
+if: $toc.url is not null
+link: $toc.url
+text: $toc.title
+role: $cta
+min-width: fit-content
+margin-bottom: 16
+color: $fpm.color.main.text
+color if $toc.is-active: $fpm.color.main.cta-primary.base
+
+--- ftd.text:
+if: $toc.url is null
+text: $toc.title
+role: $cta
+min-width: fit-content
+margin-bottom: 16
+color: $fpm.color.main.text
+color if $toc.is-active: $fpm.color.main.cta-primary.base
+padding-left: 10
+
+
+--- childrens:
+$loop$: $toc.children as $obj
+toc: $obj
+
+
+
+
+
+
+
+-- ftd.column childrens:
+fpm.toc-item toc:
+
+
+--- ftd.text: 
+link: $toc.url
+text: $toc.title
+role: $cta
+min-width: fit-content
+margin-bottom: 16
+color: $fpm.color.main.text
+margin-left: $fpm.space.space-3
+color if $toc.is-active: $fpm.color.main.cta-primary.base
+
+--- ftd.column:
+margin-left: $fpm.space.space-3
+
+--- childrens:
+$loop$: $toc.children as $obj
+toc: $obj
+
+
+
+
+
+
+
+
+
+-- ftd.column render-toc:
+fpm.toc-item list toc-obj:
+sticky: true
+top: 0
+left: 24
+height: calc 100vh - 0px
+overflow-y: auto
+width: $toc-sidebar-width
+align: top-left
+background-color:  $fpm.color.main.background.step-1
+border-radius: 8
+padding-left: 24
+padding-top: 16
+padding-right: 16
+padding-bottom: 32
+margin-top: 25
+margin-bottom: 25
+
+--- toc-instance:
+$loop$: $toc-obj as $obj
+toc: $obj
+
+
+
+
+
+
+
+
+
+-- ftd.column sub-title:
+caption title:
+optional body body:
+width: fill
+region: h1
+padding-bottom: 12
+boolean open: true
+append-at: inner
+
+--- ftd.text:
+text: $title
+caption $title:
+region: title
+text: $title
+role: $fpm.type.heading-medium
+color: $fpm.color.main.text
+padding-bottom: 8
+padding-top: 16
+$on-click$: toggle $open
+
+--- ftd.column:
+id: inner
+if: $open
+width: fill
+
+--- markdown:
+if: $body is not null
+body: $body
+
+
+
+
+
+-- tf.h0 h0: $title
+caption title:
+optional body body:
+
+$body
+
+
+
+
+-- tf.h1 h1: $title
+caption title:
+optional body body:
+
+$body
+
+
+
+
+-- tf.h2 h2: $title
+caption title:
+optional body body:
+
+$body
+
+
+
+
+-- tf.h3 h3: $title
+caption title:
+optional body body:
+
+$body
+
+
+
+
+
+
+
+
+
+
+
+-- tf.markdown markdown:
+body body:
+
+$body
+
+
+
+
+
+-- cb.code code:
+optional caption caption:
+body body:
+string lang:
+caption: $caption
+lang: $lang
+
+$body
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.iframe iframe:
+string src:
+src: $src
+height: 400
+width: fill
+margin-bottom: 34
+
+
+
+
+
+
+
+
+-- ftd.iframe youtube:
+string id:
+youtube: $id
+height: 400
+width: fill
+margin-bottom: 34
+
+
+
+
+
+
+
+-- ftd.column container:
+optional string id:
+id: $id
+max-width: 800
+width: fill
+padding-top: 15
+padding-left: 100
+padding-bottom: 60
+align: top
+
+
+
+
+
+
+-- ftd.column output:
+caption caption: Output
+width: fill
+open: true
+append-at: output-container
+padding-top: 12
+
+--- ftd.text: $caption
+color: $fpm.color.main.text
+background-color: $fpm.color.main.background.base
+border-top-radius: 2
+padding-top: 3
+padding-bottom: 3
+padding-left: 10
+padding-right: 10
+role: $fpm.type.label-big
+
+--- ftd.column:
+border-width: 1
+border-color: $fpm.color.main.text
+width: fill
+id: output-container
+padding-top: 30
+padding-bottom: 30
+padding-left: 20
+padding-right: 20
+border-radius: 2
+background-color: $fpm.color.main.background.base
+
+
+
+
+
+
+
+
+-- ftd.column image:
+optional caption caption:
+optional body body:
+optional string link:
+optional string align: center
+optional string width:
+optional string height:
+ftd.image-src src:
+width if $width is not null: fill
+height: fill
+align if $width is null: center
+
+--- ftd.image:
+src: $src
+width: $width
+height: $height
+align: $align
+
+--- ftd.text:
+if: $caption is not null
+text: $caption
+color: $fpm.color.main.text
+align: center
+width if $width is not null: $width
+width if $width is null: fill
+role: $fpm.type.label-big
+border-bottom-radius: 5
+background-color: $fpm.color.main.background.step-1
+padding-vertical: 8
+padding-horizontal: 20
+text-align: center
+
+--- ftd.column:
+if: $body is not null
+margin-top: 20
+
+--- markdown:
+body: $body
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $body is null
+margin-top: 20
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.text highlight: $title
+caption title:
+background-color: $fpm.color.main.custom.two
+color: $fpm.color.main.background.base
+padding: 3
+border-radius: 3
+
+
+
+
+
+
+
+-- ftd.row tip:
+optional caption title:
+optional body body:
+border-radius: 3
+width: fill
+background-color: $fpm.color.main.background.base
+color: $fpm.color.main.text
+
+--- ftd.column:
+width: 5
+height: percent 100
+open: false
+background-color: $fpm.color.main.background.base
+
+--- ftd.column:
+width: fill
+padding: 10
+id: m
+spacing: 10
+
+--- ftd.row:
+spacing: 5
+
+--- ftd.text: Tip
+role: $fpm.type.label-big
+
+--- ftd.text: $title
+if: $title is not null
+role. $fpm.type.label-big
+
+--- container: m
+
+--- ftd.text:
+if: $body is not null
+role: $fpm.type.copy-large
+
+$body

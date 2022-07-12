@@ -1,1 +1,2 @@
-This is my new sample blog
+# Documentation pakage
+Template for book written as FPM Package
